@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import io
-from fpdf import FPDF
 
 # --- SIP Simulation Function ---
 def sip_simulation(monthly_investment, annual_return_rate, years):
