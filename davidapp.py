@@ -26,24 +26,6 @@ def post_retirement_income_models(total_corpus, annuity_rate, swp_amount):
     years_swp = total_corpus / (swp_amount * 12)
     return annual_annuity, years_swp
 
-# --- PDF Export Class ---
-class PDFReport(FPDF):
-    def header(self):
-        self.set_font("Arial", "B", 16)
-        self.cell(0, 10, "Optimal Retirement Portfolio Report", ln=True, align="C")
-
-    def chapter_title(self, title):
-        self.set_font("Arial", "B", 12)
-        self.cell(0, 10, title, ln=True, align="L")
-
-    def chapter_body(self, body):
-        self.set_font("Arial", "", 12)
-        self.multi_cell(0, 10, body)
-
-    def add_section(self, title, body):
-        self.chapter_title(title)
-        self.chapter_body(body)
-
 # --- Title ---
 st.title("📈 Optimal Retirement Planner & SIP Simulation")
 st.markdown("Plan your retirement, estimate tax savings, and simulate income models in one place.")
